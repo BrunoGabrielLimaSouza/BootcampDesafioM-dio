@@ -23,7 +23,9 @@ public class SalasService {
         return salasRepository.save(salas);
     }
 
-    public validarSala(Salas salas){
-        if (salas.getNome().equals())
+    public void validarSala(Salas salas){
+        if (salaRepository.existsByNomeIgnoreCase(nome)) {
+            throw new IllegalArgumentException("Já existe uma sala com esse nome.");
+        }
     }
 }
