@@ -1,9 +1,12 @@
 package exercicio04.exerciciosalas.Entity.DTO;
 
+import exercicio04.exerciciosalas.Entity.Sala;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-public class SalaRequestDTO {
+public class SalaDTO {
+
+    private  Long id;
 
     @NotBlank
     private String nome;
@@ -34,6 +37,16 @@ public class SalaRequestDTO {
     }
 
     public void setLocalizacao(String localizacao) {
+
         this.localizacao = localizacao;
+    }
+
+
+    public SalaDTO(Sala sala)
+    {
+        this.nome = sala.getNome();
+        this.capacidadeMaxima = sala.getCapacidadeMaxima();
+        this.localizacao = sala.getLocalizacao();
+
     }
 }

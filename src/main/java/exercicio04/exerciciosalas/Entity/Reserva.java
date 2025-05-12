@@ -16,7 +16,6 @@ public class Reserva {
 
     private String NomeResponsavel;
     private Sala sala;
-    private String responsavel;
     private LocalDateTime inicio;
     private LocalDateTime fim;
 
@@ -40,13 +39,6 @@ public class Reserva {
         this.sala = sala;
     }
 
-    public String getResponsavel() {
-        return responsavel;
-    }
-
-    public void setResponsavel(String responsavel) {
-        this.responsavel = responsavel;
-    }
 
     public LocalDateTime getInicio() {
         return inicio;
