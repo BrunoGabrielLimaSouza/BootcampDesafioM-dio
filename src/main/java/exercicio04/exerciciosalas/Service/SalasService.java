@@ -61,4 +61,8 @@ public class SalasService {
 
         return salasRepository.save(salaExistente);
     }
+
+    public boolean oqeisso(){
+        return true;
+    }
 }
