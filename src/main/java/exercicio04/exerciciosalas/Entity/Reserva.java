@@ -1,9 +1,6 @@
 package exercicio04.exerciciosalas.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +12,10 @@ public class Reserva {
     private Long id;
 
     private String NomeResponsavel;
+    @ManyToOne
+    @JoinColumn(name = "sala_id")
     private Sala sala;
+
     private LocalDateTime inicio;
     private LocalDateTime fim;
 
